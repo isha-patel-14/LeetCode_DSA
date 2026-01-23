@@ -1,0 +1,18 @@
+class Solution {
+public:
+    string firstPalindrome(vector<string>& words) {
+        for (int i=0;i<words.size();i++){
+            string s=words[i];
+            string rev="";
+
+            for(int j=s.length()-1;j>=0;j--){
+                rev+=s[j];
+            }
+
+            if(s==rev) {
+                return s;
+            }
+        }
+        return "";
+    }
+};
